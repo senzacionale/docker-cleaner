@@ -32,3 +32,11 @@ else
 		sh -x /app/networks.sh
 	fi
 fi
+
+if [[ -z "$CLEAR_LOGS" ]]; then
+   sh -x /app/logs.sh
+else
+	if [ "$CLEAR_LOGS" = "true" ]; then
+		sh -x /app/logs.sh
+	fi
+fi
