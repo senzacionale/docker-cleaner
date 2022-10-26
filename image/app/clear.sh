@@ -40,3 +40,11 @@ else
 		sh -x /app/logs.sh
 	fi
 fi
+
+if [[ -z "$CLEAR_CACHE" ]]; then
+   sh -x /app/cache.sh
+else
+	if [ "$CLEAR_CACHE" = "true" ]; then
+		sh -x /app/cache.sh
+	fi
+fi
