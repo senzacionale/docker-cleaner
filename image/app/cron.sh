@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-# Run every 2 hours at 46 mins past the hour
-echo "46 */2 * * * /app/clear.sh" | crontab -
+# At 00:00 on every 4th day-of-month.
+echo "0 0 */4 * * /app/clear.sh" | crontab -
 
 crond -f -L -
